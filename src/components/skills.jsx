@@ -12,19 +12,31 @@ const SkillPieChart = ({ data, title }) => (
             data={data}
             cx="50%"
             cy="50%"
-            outerRadius={80}  // Aumentado
-            innerRadius={40}  // Aumentado
+            outerRadius={80}
+            innerRadius={40}
             paddingAngle={2}
             dataKey="value"
-            label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}
+            label={({ percent }) => `${(percent * 100).toFixed(0)}%`} // Solo porcentaje
             labelLine={true}
           >
             {data.map((entry, index) => (
               <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
             ))}
           </Pie>
-          <Tooltip formatter={(value) => [`${value}%`, ""]} />
-          <Legend layout="horizontal" verticalAlign="bottom" />
+          <Tooltip 
+            formatter={(value, name) => [`${value}%`, name]} // Tooltip con nombre y porcentaje
+            contentStyle={{
+              borderRadius: '8px',
+              padding: '10px',
+              border: 'none',
+              boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
+            }}
+          />
+          <Legend 
+            layout="horizontal" 
+            verticalAlign="bottom"
+            wrapperStyle={{ paddingTop: '20px' }}
+          />
         </PieChart>
       </ResponsiveContainer>
     </div>
@@ -64,7 +76,7 @@ export default function SkillsCharts() {
           data={[
             { name: "Bases Datos", value: 30 },
             { name: "Ing. Software", value: 40 },
-            { name: "GitHub", value: 30 }
+            { name: "Git/GitHub", value: 30 }
           ]} 
           title="Otras Habilidades" 
         />
@@ -104,12 +116,11 @@ export default function SkillsCharts() {
       <style jsx>{`
         .app-container {
           width: 100%;
-          padding: 10px;
+          padding: 30px;
           display: flex;
           flex-direction: column;
           align-items: center;
           box-sizing: border-box;
-          font-size: 56%
         }
         
         .title {
@@ -124,7 +135,7 @@ export default function SkillsCharts() {
           width: 100%;
           max-width: 1200px;
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
           gap: 25px;
           justify-items: center;
         }
@@ -151,7 +162,6 @@ export default function SkillsCharts() {
         .chart-container {
           width: 100%;
           height: 320px;
-          min-height: 320px;
         }
         
         .section-divider {
@@ -175,7 +185,7 @@ export default function SkillsCharts() {
           color: #FFBB28;
         }
         
-        @media (max-width: 1024px) {
+        @media (max-width: 768px) {
           .charts-grid {
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
           }
@@ -185,41 +195,13 @@ export default function SkillsCharts() {
           }
         }
         
-        @media (max-width: 768px) {
-          .charts-grid {
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 20px;
-          }
-          
-          .chart-wrapper {
-            max-width: 340px;
-          }
-          
-          .chart-container {
-            height: 260px;
-          }
-          
-          .section-divider {
-            margin: 30px 0;
-          }
-        }
-        
         @media (max-width: 480px) {
-          .app-container {
-            padding: 20px;
-          }
-          
           .chart-container {
-            height: 240px;
+            height: 250px;
           }
           
           .chart-wrapper h3 {
             font-size: 1.2rem;
-          }
-          
-          .divider-icon {
-            margin: 0 15px;
-            font-size: 1.5rem;
           }
         }
       `}</style>
