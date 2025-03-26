@@ -5,7 +5,7 @@ import Footer from './components/footer.jsx';
 import Cards from './components/cards.jsx';
 import Carusel from './components/carusel.jsx';
 
-import SoftSkills from './components/softSkills.jsx';
+
 import HardSkills from './components/skills.jsx';
 function App() {
   return (
