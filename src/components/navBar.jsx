@@ -3,7 +3,7 @@ import './navBar.css';
 
 const NavBar = () => {
   return (
-    <React.StrictMode>    
+    <>    
       <nav className="navbar navbar-expand-lg bg-indigo ">
 
         <div className="container-fluid">
@@ -58,7 +58,7 @@ const NavBar = () => {
           </div>
         </div>
       </nav>
-    </React.StrictMode>
+    </>
   );
 }
 
