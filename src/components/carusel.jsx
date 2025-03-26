@@ -18,51 +18,31 @@ const Carusel = () => {
       width: '250px',
       height: '250px',
       margin: '20px auto',
-      borderRadius: '8px',
+      borderRadius: '12px', // Cuadrado con bordes levemente redondeados
       overflow: 'hidden',
-      boxShadow: '0 4px 12px rgba(255, 255, 255, 0.1)',
-      backgroundColor: 'white'
-   
+      boxShadow: '0 4px 12px rgba(255, 255, 255, 0.2)',
+      background: 'linear-gradient(135deg, rgba(0, 255, 255, 0.4), rgba(255, 0, 255, 0.4))',
+      padding: '5px',
+      animation: 'borderAnimation 3s infinite alternate'
     },
     imageContainer: {
       width: '100%',
       height: '100%',
       display: 'flex',
       justifyContent: 'center',
-      alignItems: 'center'
+      alignItems: 'center',
+      borderRadius: '8px',
+      background: 'rgba(255, 255, 255, 0.1)',
+      backdropFilter: 'blur(10px)',
+      boxShadow: '0 0 12px rgba(255, 255, 255, 0.4) inset'
     },
     image: {
       width: '100%',
       height: '100%',
       objectFit: 'cover',
       objectPosition: 'center center',
-      display: 'block'
-    },
-    control: {
-      position: 'absolute',
-      top: '50%',
-      transform: 'translateY(-50%)',
-      background: 'rgba(255,255,255,0.7)',
-      color: '#333',
-      border: 'none',
-      width: '32px',
-      height: '32px',
-      borderRadius: '50%',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      cursor: 'pointer',
-      fontSize: '18px',
-      fontWeight: 'bold',
-      boxShadow: '0 2px 5px rgba(0,0,0,0.2)',
-      zIndex: 10,
-      transition: 'all 0.2s ease'
-    },
-    prev: { left: '10px' },
-    next: { right: '10px' },
-    controlHover: {
-      background: 'rgba(255,255,255,0.9)',
-      transform: 'translateY(-50%) scale(1.1)'
+      display: 'block',
+      borderRadius: '8px'
     }
   };
 
@@ -79,33 +59,6 @@ const Carusel = () => {
           }}
         />
       </div>
-      
-      {images.length > 1 && (
-        <>
-          <button 
-            style={{ ...styles.control, ...styles.prev }}
-            onClick={handlePrev}
-            onMouseEnter={(e) => Object.assign(e.currentTarget.style, styles.controlHover)}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.background = styles.control.background;
-              e.currentTarget.style.transform = 'translateY(-50%)';
-            }}
-          >
-            ‹
-          </button>
-          <button 
-            style={{ ...styles.control, ...styles.next }}
-            onClick={handleNext}
-            onMouseEnter={(e) => Object.assign(e.currentTarget.style, styles.controlHover)}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.background = styles.control.background;
-              e.currentTarget.style.transform = 'translateY(-50%)';
-            }}
-          >
-            ›
-          </button>
-        </>
-      )}
     </div>
   );
 };
