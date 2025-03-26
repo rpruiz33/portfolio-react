@@ -1,8 +1,8 @@
 import React from 'react'
 import HardCard from './hardCard.jsx';
 const formacion= [
-  "Estudiante de Licenciatura en Sistemas UNLa",
-  "Desarrollador Full Stack Web Digital House",
+  "Estudiante de Licenciatura en Sistemas",
+  "Desarrollador Full Stack Web ",
   "Tecnico electronico"]
 const LugaresEstudio = [
   "Universidad Nacional De Lanus",

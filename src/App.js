@@ -4,7 +4,7 @@ import NavBar from './components/navBar.jsx';
 import Footer from './components/footer.jsx';
 import Cards from './components/cards.jsx';
 import Carusel from './components/carusel.jsx';
-
+import Graficos from './components/graficos.jsx';
 function App() {
   return (
 
@@ -14,6 +14,7 @@ function App() {
       
       <Carusel />
       <Cards/>
+      <Graficos/>
       <Footer />
     </div>
   )
