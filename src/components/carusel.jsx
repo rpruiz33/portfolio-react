@@ -1,15 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-const Carusel = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const images = [
-    {
-      url: "https://media.licdn.com/dms/image/v2/C4E03AQHNOXD-nEKmgg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1639681377888?e=1743638400&v=beta&t=Yu3lzzG3ukvuxT3noL1EONtyGczTsa-kT9v-jkx09vM",
-      aspectRatio: 1 // 1:1 (cuadrada)
-    }
-  ];
-
-  
+const ImagenConEstilo = () => {
+  const imageUrl = "https://media.licdn.com/dms/image/v2/C4E03AQHNOXD-nEKmgg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1639681377888?e=1743638400&v=beta&t=Yu3lzzG3ukvuxT3noL1EONtyGczTsa-kT9v-jkx09vM";
 
   const styles = {
     container: {
@@ -17,7 +9,7 @@ const Carusel = () => {
       width: '250px',
       height: '250px',
       margin: '20px auto',
-      borderRadius: '12px', // Cuadrado con bordes levemente redondeados
+      borderRadius: '12px',
       overflow: 'hidden',
       boxShadow: '0 4px 12px rgba(255, 255, 255, 0.2)',
       background: 'linear-gradient(135deg, rgba(0, 255, 255, 0.4), rgba(255, 0, 255, 0.4))',
@@ -49,7 +41,7 @@ const Carusel = () => {
     <div style={styles.container}>
       <div style={styles.imageContainer}>
         <img 
-          src={images[currentIndex].url} 
+          src={imageUrl} 
           alt="Profile" 
           style={styles.image}
           onError={(e) => {
@@ -62,4 +54,4 @@ const Carusel = () => {
   );
 };
 
-export default Carusel;
+export default ImagenConEstilo;
