@@ -51,7 +51,7 @@ const NavBar = () => {
                 placeholder="Search"
                 aria-label="Search"
               />
-              <button className="btn btn-outline-primary text-black border-dark" type="submit">
+              <button className="btn btn-outline-primary" type="submit">
                 Search
               </button>
             </form>
