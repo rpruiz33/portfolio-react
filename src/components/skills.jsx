@@ -114,97 +114,103 @@ export default function SkillsCharts() {
       </div>
 
       <style jsx>{`
-        .app-container {
-          width: 100%;
-          padding: 30px;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          box-sizing: border-box;
-        }
-        
-        .title {
-          margin: 0 0 25px 0;
-          text-align: center;
-          font-size: clamp(1.5rem, 3vw, 2rem);
-          color: white;
-          font-weight: 600;
-        }
-        
-        .charts-grid {
-          width: 100%;
-          max-width: 1200px;
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-          gap: 25px;
-          justify-items: center;
-        }
-        
-        .chart-wrapper {
-          width: 100%;
-          max-width: 380px;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          padding: 20px;
-          background: rgba(255, 255, 255, 0.08);
-          border-radius: 12px;
-          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-        }
-        
-        .chart-wrapper h3 {
-          margin: 0 0 15px 0;
-          font-size: 1.3rem;
-          text-align: center;
-          color: rgba(255, 255, 255, 0.9);
-        }
-        
-        .chart-container {
-          width: 100%;
-          height: 320px;
-        }
-        
-        .section-divider {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          width: 100%;
-          max-width: 900px;
-          margin: 40px 0;
-        }
-        
-        .divider-line {
-          flex: 1;
-          height: 2px;
-          background: linear-gradient(90deg, transparent, #FFBB28, transparent);
-        }
-        
-        .divider-icon {
-          margin: 0 25px;
-          font-size: 1.8rem;
-          color: #FFBB28;
-        }
-        
-        @media (max-width: 768px) {
-          .charts-grid {
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-          }
-          
-          .chart-container {
-            height: 280px;
-          }
-        }
-        
-        @media (max-width: 480px) {
-          .chart-container {
-            height: 250px;
-          }
-          
-          .chart-wrapper h3 {
-            font-size: 1.2rem;
-          }
-        }
-      `}</style>
+  .app-container {
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    font-size: clamp(55%, 1vw, 100%); /* Se ajusta dinámicamente */
+  }
+  
+  .title {
+    margin: 0 0 25px 0;
+    text-align: center;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    color: white;
+    font-weight: 600;
+  }
+  
+  .charts-grid {
+    width: 100%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    justify-items: center;
+  }
+  
+  .chart-wrapper {
+    width: 100%;
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .chart-wrapper h3 {
+    margin: 0 0 15px 0;
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    text-align: center;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  
+  .chart-container {
+    width: 100%;
+    height: 320px;
+  }
+  
+  .section-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 900px;
+    margin: 40px 0;
+  }
+  
+  .divider-line {
+    flex: 1;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #FFBB28, transparent);
+  }
+  
+  .divider-icon {
+    margin: 0 25px;
+    font-size: 1.8rem;
+    color: #FFBB28;
+  }
+
+  @media (max-width: 768px) {
+    .app-container {
+      font-size: 55%;
+    }
+    
+    .charts-grid {
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+    
+    .chart-container {
+      height: 280px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .chart-container {
+      height: 250px;
+    }
+    
+    .chart-wrapper h3 {
+      font-size: 1.2rem;
+    }
+  }
+`}</style>
+
     </div>
   );
 }
