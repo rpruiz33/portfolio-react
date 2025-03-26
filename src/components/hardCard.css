@@ -25,3 +25,45 @@
   justify-content: center;
   align-items: center;
 }
+.cards-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.card {
+  width: 18rem;
+}
+
+.card-footer {
+  background-color: rgba(0, 136, 254, 1) !important; /* Fondo con color y opacidad */
+}
+
+.bg-custom {
+  background-color: rgba(0, 136, 254, 1) !important; /* Fondo con color y opacidad */
+}
+.cards-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.card {
+  width: 18rem;
+}
+
+.card-footer {
+  background-color: rgba(255, 255, 255, 1) !important; /* Fondo blanco */
+}
+
+.bg-custom {
+  background-color: rgb(143 192 176) !important;
+}
+
+.text-dark {
+  color: #000 !important; /* Texto en color negro */
+}
+
+.border-light {
+  border-color: #f8f9fa !important; /* Borde de color claro */
+}

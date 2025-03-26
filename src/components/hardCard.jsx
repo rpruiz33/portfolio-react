@@ -1,24 +1,23 @@
-import React from 'react'
+import React from 'react';
 import './hardCard.css';
 
-const hardCard = (props) => {
+const HardCard = ({ index, items, item }) => {
   return (
-    <div className="cards-container bg-black">
-    <div className="card border-success mb-3" style={{ maxWidth: "18rem" }}>
+    <div className="cards-container ">
+      <div className="card border-success mb-3 bg-custom" style={{ maxWidth: '18rem' }}>
+        <div className="card-body text-success color-black">
+          <h5 className="card-title c-black">
+            <div className="c-b" key={index}>
+              {items}
+            </div>
+          </h5>
+        </div>
+        <div className="card-footer bg-black m-7">
+          <div key={index}>{item}</div>
+        </div>
+      </div>
+    </div>
+  );
+};
 
-  <div className="card-body text-success">
-    <h5 className="card-title">
-        <div className="mr-333"key={props.index}>{props.items}</div>
-        
-    </h5>
- 
-  </div>
-  <div className="card-footer bg-transparent border-success m-7">     <div key={props.index}>{props.item}</div>
-  </div>
-</div>
-
-</div>
-  )
-}
-
-export default hardCard
+export default HardCard;

@@ -141,6 +141,7 @@ export default function App() {
           margin: 0 0 20px 0;
           text-align: center;
           font-size: clamp(1.5rem, 3vw, 2rem);
+          color: white;
         }
         
         .charts-grid {
@@ -164,6 +165,7 @@ export default function App() {
           margin: 0 0 10px 0;
           font-size: 1.2rem;
           text-align: center;
+          color:rgba(94, 87, 87, 0.8);
         }
         
         .chart-container {
