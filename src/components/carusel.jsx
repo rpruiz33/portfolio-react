@@ -20,8 +20,9 @@ const Carusel = () => {
       margin: '20px auto',
       borderRadius: '8px',
       overflow: 'hidden',
-      boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
-      backgroundColor: '#f5f5f5'
+      boxShadow: '0 4px 12px rgba(255, 255, 255, 0.1)',
+      backgroundColor: 'white'
+   
     },
     imageContainer: {
       width: '100%',

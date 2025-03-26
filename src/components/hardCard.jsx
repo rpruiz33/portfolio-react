@@ -12,7 +12,7 @@ const HardCard = ({ index, items, item }) => {
             </div>
           </h5>
         </div>
-        <div className="card-footer bg-black m-7">
+        <div className="card-footer bg-w m-7">
           <div key={index}>{item}</div>
         </div>
       </div>

@@ -40,7 +40,7 @@ const SoftSkillsCharts = () => {
       backgroundColor:  'rgba(188, 182, 182, 0.1)', // Fondo gris claro
       borderRadius: '12px',
       marginTop: '40px',
-      boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
+      boxShadow: '0 4px 12px rgba(255, 255, 255, 0.1)'
     }}>
       <h2 style={{
         textAlign: 'center',
@@ -60,15 +60,16 @@ const SoftSkillsCharts = () => {
       }}>
         {skillsData.map((skill, index) => (
           <div key={index} style={{
-            backgroundColor: 'rgba(188, 182, 182, 0.1)',
+            backgroundColor: 'rgba(255, 255, 255, 0.1)',
             padding: '20px',
             borderRadius: '10px',
-            boxShadow: '0 2px 8px rgba(0,0,0,0.05)'
+            boxShadow: '0 2px 8px rgba(249, 249, 249, 0.05)',
+            color:'white'
           }}>
             <h3 style={{
               textAlign: 'center',
               marginBottom: '20px',
-              color: '#495057',
+              color: 'white',
               fontSize: '20px'
             }}>
               {skill.title}
@@ -93,7 +94,7 @@ const SoftSkillsCharts = () => {
                       borderRadius: '8px',
                       padding: '10px',
                       border: 'none',
-                      boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
+                      boxShadow: '0 2px 4px rgba(255, 255, 255, 0.1)'
                     }}
                   />
                   <Legend />
@@ -101,7 +102,7 @@ const SoftSkillsCharts = () => {
                     dataKey="value" 
                     name="Nivel" 
                     barSize={25}
-                    label={{ position: 'right', fill: '#333', fontSize: 14 }}
+                    label={{ position: 'right', fill: 'white', fontSize: 14 }}
                   >
                     {skill.data.map((entry, index) => (
                       <Cell 
