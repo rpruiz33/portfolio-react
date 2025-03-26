@@ -1,9 +1,9 @@
 import React from 'react'
-import './hardCard.scss';
+import './hardCard.css';
 
 const hardCard = (props) => {
   return (
-    <div className="cards-container">
+    <div className="cards-container bg-black">
     <div className="card border-success mb-3" style={{ maxWidth: "18rem" }}>
 
   <div className="card-body text-success">

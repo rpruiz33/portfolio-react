@@ -8,11 +8,12 @@ import Carusel from './components/carusel.jsx';
 function App() {
   return (
 
-    <div >
+    <div className="bg-black" >
 
       <NavBar />
-      <Cards/>
+      
       <Carusel />
+      <Cards/>
       <Footer />
     </div>
   )

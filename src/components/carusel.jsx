@@ -22,9 +22,9 @@ const images = [
     };
   
     return (
-      <div className="container">
+      <div className="container bg-black">
         <div className="carousel slide">
-          <div className="carousel-inner">
+          <div className="d-flex justify-content-center align-items-center ">
         
             
                 <img src="https://media.licdn.com/dms/image/v2/C4E03AQHNOXD-nEKmgg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1639681377888?e=1743638400&v=beta&t=Yu3lzzG3ukvuxT3noL1EONtyGczTsa-kT9v-jkx09vM"  className="d-flex w-25" />

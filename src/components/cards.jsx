@@ -11,7 +11,8 @@ const LugaresEstudio = [
 ]
 const cards = () => {
   return (
-<div className="d-flex m-1 row row-cols-1 row-cols-md-4 g-2 p-4 m-8">
+<div className="d-flex justify-content-center align-items-center m-1 row row-cols-1 row-cols-md-4 g-2 p-4 m-8">
+
 
 <HardCard key={1} items={formacion[0]} item={LugaresEstudio[0]} />
 <HardCard key={2} items={formacion[1]} item={LugaresEstudio[1]}/>
