@@ -1,10 +1,7 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-
-// https://vite.dev/config/
 export default defineConfig({
-  base: 'portfolio-react',
+  base: '/portfolio-react/',  // Asegúrate de poner la barra al principio
   build: {
     outDir: 'dist',  // Asegúrate de que el directorio de salida sea correcto
   },
+  plugins: [react()],
 })
