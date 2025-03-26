@@ -113,6 +113,7 @@ export default function SkillsCharts() {
           flex-direction: column;
           align-items: center;
           box-sizing: border-box;
+          font-size: 53%;
         }
         
         .title {
@@ -197,7 +198,7 @@ export default function SkillsCharts() {
           
           .divider-icon {
             margin: 0 10px;
-            font-size: 1.2rem;
+            font-size: 0.8rem;
           }
         }
       `}</style>
