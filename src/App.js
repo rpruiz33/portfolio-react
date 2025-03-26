@@ -17,7 +17,7 @@ function App() {
       <Carusel />
       <Cards/>
       <HardSkills/>
-      <SoftSkills/>
+    
       <Footer />
     </div>
   )
